@@ -11,158 +11,166 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Profile Card Styles */
-        .profile-card {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-card i {
-            font-size: 40px;
-            color: #007bff;
-        }
-
-        .profile-info {
-            margin-top: 20px;
-        }
-
-        .profile-info h5 {
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .profile-info p {
-            margin: 0;
-            color: #6c757d;
-        }
-
-        .divider {
-            border-bottom: 1px solid #ddd;
-            margin: 20px 0;
-        }
-
-        .time-info {
-            text-align: left;
-        
-        }
-
-        .time-info h5 {
-            font-weight: 400;
-            margin-bottom: 5px;
-        }
-
-        .time-info p {
-            color: #6c757d;
-            margin: 0;
-            margin-bottom: 5px;
-        }
-
-        /* Update Profile Styles */
-        .update-profile {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .update-profile form {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .form-group label {
-            font-weight: bold;
-        }
-
-        .required-label::after {
-            content: " *";
-            color: red;
-        }
-
-        .update-btn {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .update-btn .btn {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .update-btn .btn i {
-            margin-left: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="profile-card">
-                    <i class="bi bi-person-circle"></i>
-                    <div class="profile-info">
-                        <h5>Incolearn</h5>
-                        <p class="text-primary">user@example.com</p>
-                        <p>+123 456 7890</p>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="time-info">
-                        <h5>Login Time</h5>
-                        <p>10 Oct 2024, 09:00 AM</p>
-                        <br>
-                        <h5>Last Logout Time</h5>
-                        <p>10 Oct 2024, 05:00 PM</p>
-                    </div>
-                </div>
+    <!-- for header part -->
+    <header>
+
+        <div class="logosec">
+            <div class="logo">
+                <img src="./public/images/logo-xy1.png" height="50px" width="160px">
             </div>
+            <span class="icn menuicn" id="menuicn"><i class="bi bi-list"></i></span>
+        </div>
 
-            <div class="col-md-8">
-                <div class="update-profile">
-                    <h4>Update Profile</h4>
-                    <div class="divider"></div>
-                    <form>
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <label for="name" class="required-label">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Name">
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <label for="email" class="required-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Email">
-                            </div>
-                        </div>
+        <div class="searchbar">
+            <input type="text" placeholder="Search">
+            <div class="searchbtn">
 
-                        <div class="row">
-                            <div class="col-md-6 form-group">
-                                <label for="mobile" class="required-label">Mobile</label>
-                                <input type="text" class="form-control" id="mobile" placeholder="Mobile">
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <label for="profile-pic" class="required-label">Profile</label>
-                                <input type="file" class="form-control" id="profile-pic">
-                            </div>
-                        </div>
-                    </form>
-                    <div class="update-btn">
-                        <button type="submit" class="btn btn-primary">Update Profile
-                            <i class="bi bi-check-circle"></i>
-                        </button>
-                    </div>
-                </div>
+                <span class="icn srchicn"><i class="bi bi-search"></i></span>
+
             </div>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="message">
+            <div class="circle"></div>
+            <span class="icn"><i class="bi bi-bell-fill"></i></span>
+            <div class="dp">
+                <span class="dpicn"><i class="bi bi-person-circle"></i></span>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="main-container">
+        <div class="navcontainer">
+            <nav class="nav">
+                <div class="nav-upper-options">
+                    <div class="nav-option option1">
+                        <span class="nav-img"><i class="bi bi-window-fullscreen"></i></span>
+                        <h3> <a href="#">Dashboard</a></h3>
+                    </div>
+
+                    <div class="option2 nav-option">
+                        <span class="nav-img"><i class="bi bi-person-circle"></i></span>
+                        <h3> <a href="#">Profile</a></h3>
+                    </div>
+
+                    <div class="nav-option option3">
+                        <span class="nav-img"><i class="bi bi-journal-richtext"></i></span>
+                        <h3> <a href="#">Courses</h3>
+                    </div>
+
+                    <div class="nav-option option4">
+                        <span class="nav-img"><i class="bi bi-clock-fill"></i></span>
+                        <h3> <a href="#">Upcoming Classes</a></h3>
+                    </div>
+
+                    <div class="nav-option option5">
+                        <span class="nav-img"><i class="bi bi-heart"></i></span>
+                        <h3> <a href="#">Wishlist</a></h3>
+                    </div>
+
+                    <div class="nav-option option5">
+                        <span class="nav-img"><i class="bi bi-patch-check"></i></span>
+                        <h3> <a href="#">Certificates</a></h3>
+                    </div>
+
+                    <div class="nav-option option6">
+                        <span class="nav-img"><i class="bi bi-gear"></i></span>
+                        <h3> <a href="#">Settings</a></h3>
+                    </div>
+
+                    <div class="nav-option logout">
+                        <span class="nav-img"><i class="bi bi-box-arrow-down-right"></i></span>
+                        <h3> <a href="#">Logout</a></h3>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+        <div class="main">
+
+            <div class="searchbar2">
+                <input type="text" name="" id="" placeholder="Search">
+                <div class="searchbtn">
+                    <span class="icn srchicn"><i class="bi bi-search"></i></span>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-card">
+                            <i class="bi bi-person-circle"></i>
+                            <div class="profile-info">
+                                <h5>Incolearn</h5>
+                                <p class="text-primary">user@example.com</p>
+                                <p>+123 456 7890</p>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="time-info">
+                                <h5>Login Time</h5>
+                                <p>10 Oct 2024, 09:00 AM</p>
+                                <br>
+                                <h5>Last Logout Time</h5>
+                                <p>10 Oct 2024, 05:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="update-profile">
+                            <h4>Update Profile</h4>
+                            <div class="divider"></div>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="name" class="required-label">Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Name">
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="email" class="required-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label for="mobile" class="required-label">Mobile</label>
+                                        <input type="text" class="form-control" id="mobile" placeholder="Mobile">
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="profile-pic" class="required-label">Profile</label>
+                                        <input type="file" class="form-control" id="profile-pic">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="update-btn">
+                                <button type="submit" class="btn btn-primary">Update Profile
+                                    <i class="bi bi-check-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+
+    <footer class="footer">
+        <p>Incolearn &copy; 2024 Designed by Incobist</p>
+    </footer>
+
 </body>
 
 </html>

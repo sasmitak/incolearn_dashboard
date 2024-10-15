@@ -553,7 +553,8 @@ header {
     .nav-option h3 {
         font-size: 15px;
     }
-    .footer{
+
+    .footer {
         margin-left: 20%;
     }
 
@@ -756,15 +757,108 @@ a {
     margin: 0;
     color: #000;
     padding-left: 30%;
-    
+
 }
 
 @media screen and (max-width: 768px) {
     .footer p {
         padding-left: 0%;
     }
-    .footer{
+
+    .footer {
         margin-left: 0%;
         text-align: center;
     }
+}
+
+
+/* ------------Profile-page------------- */
+
+
+/* Profile Card Styles */
+.profile-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card i {
+    font-size: 40px;
+    color: #007bff;
+}
+
+.profile-info {
+    margin-top: 20px;
+}
+
+.profile-info h5 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.profile-info p {
+    margin: 0;
+    color: #6c757d;
+}
+
+.divider {
+    border-bottom: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.time-info {
+    text-align: left;
+
+}
+
+.time-info h5 {
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.time-info p {
+    color: #6c757d;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+/* Update Profile Styles */
+.update-profile {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-profile form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.required-label::after {
+    content: " *";
+    color: red;
+}
+
+.update-btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.update-btn .btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.update-btn .btn i {
+    margin-left: 5px;
 }

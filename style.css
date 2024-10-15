@@ -862,3 +862,56 @@ a {
 .update-btn .btn i {
     margin-left: 5px;
 }
+/* dropdown  */
+
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Button that triggers the dropdown */
+  .dropdown-btn {
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 300;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown content hidden by default */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+    top: 40px;
+    right: 0;
+    text-align: left;
+    border-radius: 4px;
+  }
+  
+  /* Dropdown links */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Show the dropdown on button click */
+  .show {
+    display: block;
+  }
+  
+
+
+

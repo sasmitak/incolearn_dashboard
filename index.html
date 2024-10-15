@@ -62,7 +62,13 @@
 
                     <div class="nav-option option3">
                         <span class="nav-img"><i class="bi bi-journal-richtext"></i></span>
-                        <h3> <a href="#">Courses</h3>
+                        <div class="dropdown">
+                            <h3> <a href="#" class="dropdown-btn" onclick="toggleDropdown()">Courses</a></h3>
+                            <div id="dropdown-content" class="dropdown-content">
+                                <a href="#">My Courses</a>
+                                <a href="#">All Courses</a>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="nav-option option4">
@@ -207,7 +213,7 @@
     <footer class="footer">
         <p>Incolearn &copy; 2024 Designed by Incobist</p>
     </footer>
-    
+
 </body>
 
 </html>

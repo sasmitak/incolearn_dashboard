@@ -69,3 +69,23 @@ for (let i = 1; i <= daysInMonth; i++) {
     }
     calendar.appendChild(dateElement);
 }
+
+
+/* for dropdown js*/
+function toggleDropdown() {
+    document.getElementById("dropdown-content").classList.toggle("show");
+}
+
+// Close dropdown if user clicks outside of it
+window.onclick = function (event) {
+    if (!event.target.matches('.dropdown-btn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+

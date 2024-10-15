@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- for header part -->
+    <header>
+
+        <div class="logosec">
+            <div class="logo">
+                <img src="./public/images/logo-xy1.png" height="50px" width="160px">
+            </div>
+            <span class="icn menuicn" id="menuicn"><i class="bi bi-list"></i></span>
+        </div>
+
+        <div class="searchbar">
+            <input type="text" placeholder="Search">
+            <div class="searchbtn">
+
+                <span class="icn srchicn"><i class="bi bi-search"></i></span>
+
+            </div>
+        </div>
+
+        <div class="message">
+            <div class="circle"></div>
+            <span class="icn"><i class="bi bi-bell-fill"></i></span>
+            <div class="dp">
+                <span class="dpicn"><i class="bi bi-person-circle"></i></span>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="main-container">
+        <div class="navcontainer">
+            <nav class="nav">
+                <div class="nav-upper-options">
+                    <div class="nav-option option1">
+                        <span class="nav-img"><i class="bi bi-window-fullscreen"></i></span>
+                        <h3> <a href="#">Dashboard</a></h3>
+                    </div>
+
+                    <div class="option2 nav-option">
+                        <span class="nav-img"><i class="bi bi-person-circle"></i></span>
+                        <h3> <a href="#">Profile</a></h3>
+                    </div>
+
+                    <div class="nav-option option3">
+                        <span class="nav-img"><i class="bi bi-journal-richtext"></i></span>
+                        <h3> <a href="#">Courses</h3>
+                    </div>
+
+                    <div class="nav-option option4">
+                        <span class="nav-img"><i class="bi bi-clock-fill"></i></span>
+                        <h3> <a href="#">Upcoming Classes</a></h3>
+                    </div>
+
+                    <div class="nav-option option5">
+                        <span class="nav-img"><i class="bi bi-heart"></i></span>
+                        <h3> <a href="#">Wishlist</a></h3>
+                    </div>
+
+                    <div class="nav-option option5">
+                        <span class="nav-img"><i class="bi bi-patch-check"></i></span>
+                        <h3> <a href="#">Certificates</a></h3>
+                    </div>
+
+                    <div class="nav-option option6">
+                        <span class="nav-img"><i class="bi bi-gear"></i></span>
+                        <h3> <a href="#">Settings</a></h3>
+                    </div>
+
+                    <div class="nav-option logout">
+                        <span class="nav-img"><i class="bi bi-box-arrow-down-right"></i></span>
+                        <h3> <a href="#">Logout</a></h3>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+        <div class="main">
+
+            <div class="searchbar2">
+                <input type="text" name="" id="" placeholder="Search">
+                <div class="searchbtn">
+                    <span class="icn srchicn"><i class="bi bi-search"></i></span>
+                </div>
+            </div>
+
+            <!-------------welcome-box-container--------->
+            <div class="welcome-box">
+                <h4>Hi, <span class="welcome-box-h2">Debashis</span> <span style='font-size:30px;'>&#127881;</span></h4>
+                <p>Welcome back to your dashboard. Here is a quick overview of your progress.</p>
+                <p>31<sup>st</sup> July 2024</p>
+                <button class="welcome-box-btn">Courses</button>
+            </div>
+
+            <!-------------cards-section----------->
+
+            <section class="cards-section">
+                <h4>Learning Overview</h4>
+                <div class="cards-container">
+                    <div class="card">
+                        <div class="cards-header">
+                            <h5>My Courses</h5>
+                        </div>
+                        <div class="cards-body">
+                            <p>Total</p>
+                            <p>10 Courses</p>
+                        </div>
+                        <div class="cards-footer">
+                            <a href="#">View Details <i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="cards-header">
+                            <h5>Completed Courses</h5>
+                        </div>
+                        <div class="cards-body">
+                            <p>Total</p>
+                            <p>8 Courses</p>
+                        </div>
+                        <div class="cards-footer">
+                            <a href="#">View Details <i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="cards-header">
+                            <h5>Certificates</h5>
+                        </div>
+                        <div class="cards-body">
+                            <p>Total</p>
+                            <p>7 Certificates</p>
+                        </div>
+                        <div class="cards-footer">
+                            <a href="#">View Details <i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-----------------Progress-section------------------>
+
+            <section class="daily-progress">
+                <h4>Daily Progress</h4>
+                <div class="row progress-boxes">
+                    <div class="col-lg-5 progress-box">
+                        <canvas id="progressGraph"></canvas>
+                    </div>
+                    <div class="col-lg-5 progress-box">
+                        <div class="calendar-header">
+                            <div class="month" id="month"></div>
+                            <div class="year" id="year"></div>
+                        </div>
+                        <div id="calendar"></div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!----------------courses-section-------------->
+
+            <section class="popular-courses">
+                <h4>Popular Courses</h4>
+                <div class="courses-boxes">
+                    <div class="courses-box">
+                        <img src="./public/images/course-3.png">
+                        <h5>Digital Marketing Course</h5>
+                        <p>19<sup>th</sup> August 2024</p>
+                    </div>
+                    <div class="courses-box">
+                        <img src="./public/images/course-2.png">
+                        <h5>Full Stack Java</h5>
+                        <p>21<sup>st</sup> September 2024</p>
+                    </div>
+                    <div class="courses-box">
+                        <img src="./public/images/course-3.png">
+                        <h5>Data Analysis</h5>
+                        <p>23<sup>rd</sup> October 2024</p>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+
+    <footer class="footer">
+        <p>Incolearn &copy; 2024 Designed by Incobist</p>
+    </footer>
+    
+</body>
+
+</html>

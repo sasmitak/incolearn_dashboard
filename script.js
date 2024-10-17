@@ -71,21 +71,32 @@ for (let i = 1; i <= daysInMonth; i++) {
 }
 
 
-/* for dropdown js*/
-function toggleDropdown() {
-    document.getElementById("dropdown-content").classList.toggle("show");
-}
+/* ---------------for dropdown js-------------------------*/
 
-// Close dropdown if user clicks outside of it
-window.onclick = function (event) {
-    if (!event.target.matches('.dropdown-btn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
+
+document.querySelector('.option3').addEventListener('click', function () {
+    const dropdownMenu = this.querySelector('.dropdown-menu');
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+});
+
+/*-------------this is the profile_dropdowmn-----------------------*/
+
+
+const profileIcon = document.getElementById('dp');
+const profileDropdown = document.getElementById('profileDropdown');
+
+
+profileIcon.addEventListener('click', function (event) {
+    profileDropdown.style.display = profileDropdown.style.display === 'block' ? 'none' : 'block';
+    event.stopPropagation(); 
+});
+
+
+document.addEventListener('click', function (event) {
+    const isClickInside = profileIcon.contains(event.target);
+
+    if (!isClickInside) {
+        profileDropdown.style.display = 'none'; 
     }
-}
+});
 

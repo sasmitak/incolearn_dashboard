@@ -862,56 +862,129 @@ a {
 .update-btn .btn i {
     margin-left: 5px;
 }
-/* dropdown  */
 
 
-/* Dropdown container */
+/* -------------dropdown -----------------*/
+
+/* Dropdown Menu Styling */
 .dropdown {
     position: relative;
-    display: inline-block;
-  }
-  
-  /* Button that triggers the dropdown */
-  .dropdown-btn {
-    color: black;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-family: 300;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Dropdown content hidden by default */
-  .dropdown-content {
+}
+
+.dropdown-menu {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    min-width: 160px;
-    top: 40px;
-    right: 0;
-    text-align: left;
-    border-radius: 4px;
-  }
-  
-  /* Dropdown links */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+    left: 0;
+    top: 100%;
+    background-color: white;
+    width: 220px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 10px 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dropdown-menu li a {
     text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-option.option3:hover .dropdown-menu {
     display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  
-  /* Show the dropdown on button click */
-  .show {
+}
+
+/* Close Dropdown When Hover Ends */
+.dropdown:hover .dropdown-menu {
     display: block;
-  }
-  
+}
 
 
 
+
+/* ------------profile-card------------ */
+/* Profile dropdown container */
+
+.profile-dropdown {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 200;
+    font-family: Arial, sans-serif;
+}
+
+/* Profile header inside dropdown */
+.profile-header {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px 12px 0 0;
+    color: white;
+}
+
+.profile-details-left {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.profile-image-right {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image-right .profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profile-options {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 0;
+}
+
+.profile-options li {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile-options li:hover {
+    background-color: #f2f2f2;
+}
+
+.profile-options i {
+    margin-right: 10px;
+}
+
+.logout {
+    color: var(--one-use-color);
+}
+
+/* Profile icon in the header */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}

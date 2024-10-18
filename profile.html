@@ -39,11 +39,27 @@
         <div class="message">
             <div class="circle"></div>
             <span class="icn"><i class="bi bi-bell-fill"></i></span>
-            <div class="dp">
+            <div class="dp" id="dp">
                 <span class="dpicn"><i class="bi bi-person-circle"></i></span>
+
+                <!-- Profile dropdown box -->
+                <div class="profile-dropdown" id="profileDropdown">
+                    <div class="profile-header">
+                        <div class="profile-details-left">
+                            <p class="profile-name">Incolearn</p>
+                        </div>
+                        <div class="profile-image-right">
+                            <img src="./public/images/course-2.png" alt="Profile Image" class="profile-image">
+                        </div>
+                    </div>
+                    <ul class="profile-options">
+                        <li><i class="bi bi-person"></i> My Profile</li>
+                        <li><i class="bi bi-lock"></i> Change Password</li>
+                        <li class="logout"><i class="bi bi-power"></i> Logout</li>
+                    </ul>
+                </div>
             </div>
         </div>
-
     </header>
 
     <div class="main-container">
@@ -108,7 +124,7 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row">
+                <div class="row profile_container">
                     <div class="col-md-4">
                         <div class="profile-card">
                             <img src="./public/images/logo-xy1.png" height="70px" width="120px">
@@ -162,9 +178,6 @@
                     </div>
                 </div>
             </div>
-
-
-
         </div>
 
     </div>

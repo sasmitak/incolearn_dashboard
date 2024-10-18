@@ -988,3 +988,7 @@ a {
     border-radius: 50%;
     cursor: pointer;
 }
+
+.profile_container{
+    padding-bottom: 130px;
+}
